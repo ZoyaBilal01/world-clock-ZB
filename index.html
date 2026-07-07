@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WORLD CLOCK ZB</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-top">
+          <div>
+            <p class="eyebrow">Live global timekeeping</p>
+            <h1>WORLD CLOCK ZB</h1>
+            <p class="hero-copy">
+              Check the time in 50 major cities and convert between time zones instantly.
+            </p>
+          </div>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+            🌙 Dark Mode
+          </button>
+        </div>
+
+        <div class="search-box">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search for a city or country..."
+            aria-label="Search city"
+          />
+        </div>
+
+        <div class="live-clock-card">
+          <div>
+            <p class="clock-label">Current local time</p>
+            <div id="digitalClock" class="digital-clock">--:--:--</div>
+            <p id="digitalDate" class="clock-meta">Loading...</p>
+          </div>
+          <div id="clockBadge" class="clock-badge">🌍</div>
+        </div>
+      </header>
+
+      <section class="converter-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Time zone converter</p>
+            <h2>Convert the time between two cities</h2>
+          </div>
+        </div>
+
+        <div class="converter-grid">
+          <label class="select-card">
+            <span>From</span>
+            <select id="fromCity"></select>
+          </label>
+
+          <label class="select-card">
+            <span>To</span>
+            <select id="toCity"></select>
+          </label>
+        </div>
+
+        <div id="converterResult" class="converter-result">
+          Select two cities to see the converted time.
+        </div>
+      </section>
+
+      <section class="cities-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Live city cards</p>
+            <h2>50 major cities around the world</h2>
+          </div>
+          <p class="section-note">Updated every second</p>
+        </div>
+
+        <div id="citiesGrid" class="cities-grid"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
